@@ -2,24 +2,24 @@
 %define  rel     1
 %define  prefix  /usr
 
-Summary: GTKBe - A BeOS-like gtk+ theme engine
-Name: gtk-gtkbe-theme
-Version: %ver
-Release: %rel
-Group: Misc
-Copyright: GPL
-Source: 
-Url:
-BuildRoot: /var/tmp/mac2-%{PACKAGE_VERSION}-root
-Docdir: %{prefix}/doc
+Summary:	GTKBe - A BeOS-like gtk+ theme engine
+Name:		gtk-gtkbe-theme
+Version:	%ver
+Release:	%rel
+Group:		Themes/Gtk
+Group(pl):	Motywy/Gtk
+License:	GPL
+Source0:	
+Url:		
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Requires: gtk+ >= 1.2
+Requires:	gtk+ >= 1.2
 
 %description
 A clean, BeOS-like theme.
 
 %prep
-%setup
+%setup -q
 
 %build
 
@@ -39,20 +39,18 @@ fi
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT%{prefix} install
+%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%changelog
-
 %files
-%defattr(-, root, root)
+%defattr(644,root,root,755)
 
 %doc AUTHORS ChangeLog NEWS README COPYING 
 
-%{prefix}/share/themes/GTKBe/gtk/gtkrc
-%{prefix}/share/themes/GTKBe/ICON.png
-%{prefix}/share/themes/GTKBe/README.html
+%{_datadir}/themes/GTKBe/gtk/gtkrc
+%{_datadir}/themes/GTKBe/ICON.png
+%{_datadir}/themes/GTKBe/README.html
 
-%{prefix}/lib/gtk/themes/engines/*
+%{_libdir}/gtk/themes/engines/*
