@@ -22,11 +22,7 @@ Motyw podobny do BeOS.
 %setup -q
 
 %build
-%ifarch alpha
-  CFLAGS="%{rpmcflags}" ./configure --host=alpha-redhat-linux --prefix=%{_prefix}
-%else
-  CFLAGS="%{rpmcflags}" ./configure --prefix=%{_prefix}
-%endif
+%configure2_13
 
 %{__make}
 
