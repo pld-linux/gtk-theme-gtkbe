@@ -1,9 +1,9 @@
 Summary:	GTKBe - A BeOS-like gtk+ theme engine
 Summary(pl):	GTKBe - motyw gtk+ podobny do BeOS
-Name:		gtk-gtkbe-theme
+Name:		gtk-theme-gtkbe
 Version:	1.0.3
 Release:	1
-Group:		Themes/Gtk
+Group:		Themes/GTK+
 License:	GPL
 Source0:
 URL:
@@ -27,7 +27,8 @@ Motyw podobny do BeOS.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
