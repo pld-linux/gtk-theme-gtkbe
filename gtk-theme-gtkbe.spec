@@ -1,5 +1,5 @@
-Summary:	GTKBe - A BeOS-like gtk+ theme engine
-Summary(pl):	GTKBe - motyw gtk+ podobny do BeOS
+Summary:	GTKBe - A BeOS-like GTK+ theme engine
+Summary(pl):	GTKBe - motyw GTK+ podobny do BeOS
 Name:		gtk-theme-gtkbe
 Version:	1.0.3
 Release:	1
