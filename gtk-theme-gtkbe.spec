@@ -5,8 +5,8 @@ Version:	1.0.3
 Release:	1
 Group:		Themes/Gtk
 License:	GPL
-Source0:	
-URL:		
+Source0:
+URL:
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gtk+ >= 1.2
 
