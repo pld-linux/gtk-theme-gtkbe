@@ -1,12 +1,11 @@
-%define  ver     1.0.3
-%define  rel     1
 %define  prefix  /usr
 
 Summary:	GTKBe - A BeOS-like gtk+ theme engine
 Name:		gtk-gtkbe-theme
-Version:	%ver
-Release:	%rel
+Version:	1.0.3
+Release:	1
 Group:		Themes/Gtk
+Group(de):	Themen/Gtk
 Group(pl):	Motywy/Gtk
 License:	GPL
 Source0:	
@@ -24,9 +23,9 @@ A clean, BeOS-like theme.
 %build
 
 %ifarch alpha
-  CFLAGS="$RPM_OPT_FLAGS" ./configure --host=alpha-redhat-linux --prefix=%prefix
+  CFLAGS="%{rpmcflags}" ./configure --host=alpha-redhat-linux --prefix=%prefix
 %else
-  CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%prefix 
+  CFLAGS="%{rpmcflags}" ./configure --prefix=%prefix 
 %endif
 
 if [ "$SMP" != "" ]; then
