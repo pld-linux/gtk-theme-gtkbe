@@ -4,8 +4,6 @@ Name:		gtk-gtkbe-theme
 Version:	1.0.3
 Release:	1
 Group:		Themes/Gtk
-Group(de):	Themen/Gtk
-Group(pl):	Motywy/Gtk
 License:	GPL
 Source0:	
 URL:		
